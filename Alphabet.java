@@ -21,7 +21,7 @@ public abstract class Alphabet {
         }
         catch(IOException excep) //всегда нужно проверять дейсвие открытие файла и загрузку его содержимого, т.к. действие "не безопасное"
         {
-            excep.printStackTrace();
+            System.err.println("Error while reading file: " + e.getLocalizedMessage());
         }
     }
 
