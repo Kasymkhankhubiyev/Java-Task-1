@@ -8,4 +8,11 @@ import java.util.Scanner;
 
 abstract class Translator { //строим слова при помощи StringBuilder
     abstract StringBuilder build(File Inputfile); //abstract т.к. у нас ООП, а значит переводы будут через одну
-}              // и ту же функцию, но с перееобозначенными реализациями. 
+}              // и ту же функцию, но с перееобозначенными реализациями.
+
+class Eng_Translator extends Translator {
+    @Override
+    StringBuilder build(File Inputfile) {
+        
+    }
+}
