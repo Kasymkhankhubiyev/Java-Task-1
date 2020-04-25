@@ -14,7 +14,7 @@ public abstract class Alphabet {
 
         try {
             alph_code = new FileInputStream("c:\\Eng_to_Mor"); //принимает путьж
-            alph_code = new FileInputStream("C:\\Mor_to_Eng");
+            alph_decode = new FileInputStream("C:\\Mor_to_Eng");
 
             EM.load(alph_code); //теперь заполняем наш контейнер, с которым будем работать.
             ME.load(alph_decode);
