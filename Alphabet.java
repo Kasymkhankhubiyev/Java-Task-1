@@ -13,16 +13,15 @@ public abstract class Alphabet {
         FileInputStream alph_decode = null;
 
         try {
-            alph_code = new FileInputStream("c:\\Eng_to_Mor"); //принимает путьж
-            alph_decode = new FileInputStream("C:\\Mor_to_Eng");
+            alph_code = new FileInputStream("C:\\Users\\Tom\\Desktop\\Programming\\java\\Eng_to_Mor"); //принимает путьж
+            alph_decode = new FileInputStream("C:\\Users\\Tom\\Desktop\\Programming\\java\\Mor_to_Eng");
 
             EM.load(alph_code); //теперь заполняем наш контейнер, с которым будем работать.
             ME.load(alph_decode);
         }
-        catch(IOException excep) //всегда нужно проверять дейсвие открытие файла и загрузку его содержимого, т.к. действие "не безопасное"
-        {
+        catch(IOException e){ //всегда нужно проверять дейсвие открытие файла и загрузку его содержимого, т.к. действие "не безопасное"
             System.err.println("Error while reading file: " + e.getLocalizedMessage());
         }
     }
-
 }
+
