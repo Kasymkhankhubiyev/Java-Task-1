@@ -12,7 +12,7 @@ public class Statistics {
         return ch;
     }
     @Override
-    public boolean equals (Object o){
+    public boolean equals (Object o){//супер класс, вызывается для сравнения двух классов
         Statistics other = (Statistics) o;
         if (this == o){
             other.counter++;
