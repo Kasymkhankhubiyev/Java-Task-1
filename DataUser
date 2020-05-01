@@ -1,0 +1,29 @@
+package com.company;
+
+import java.util.HashSet;
+import java.util.Iterator;
+
+public class DataUser {
+    static HashSet<Statistics> hs = new HashSet<Statistics>();
+    static void add(char ch){
+        Statistics tmp = new Statistics(ch);
+        if(!hs.contains(tmp)){
+            hs.add(tmp);
+        }
+    }
+    static HashSet<Statistics> getStatistics(){
+        return hs;
+    }
+    static void printStatistics(){
+        Iterator<Statistics> i = hs.iterator();
+        int f = 0;
+        while (i.hasNext()){
+            Statistics tmp = i.next();
+            if(f<tmp.counter){
+                f=tmp.counter;
+            }
+            //System.out.println(tmp.print());
+        }
+        System.out.println("The most frequent symbol is:  "+ f + '\n');
+    }
+}
