@@ -12,16 +12,16 @@ public class Statistics {
         return ch;
     }
     @Override
-    public boolean equals (Object o){//супер класс, вызывается для сравнения двух классов
-        Statistics other = (Statistics) o;
-        if (this == o){
+    public boolean equals (Object obj){//супер класс, вызывается для сравнения двух классов
+        Statistics other = (Statistics) obj;
+        if (this == obj){
             other.counter++;
             this.counter = other.counter;
             return true;
         }
         if (o == null)
             return false;
-        if (getClass() != o.getClass())
+        if (getClass() != obj.getClass())
             return false;
         if (this.ch != other.ch)
             return false;
